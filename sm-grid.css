@@ -1,0 +1,177 @@
+@charset utf-8;
+/*--
+	Descripción: Hoja de estilo para sistema de Grilla propio.
+	Autor: Salvador Menchú Azurdia 
+	Email: smdevsys@gmail.com 
+	https://github.com/smdevsys
+--*/
+
+body, html, h2{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #272822;
+	font-family: sans-serif;
+	color: #fff;
+}
+
+h2{
+	text-align: center;
+	font-size: 1em;
+}
+
+.fila{
+	width: 90%;
+	margin: 2% auto;
+	/*margin: 1em auto;*/
+	/*background: #fff; Separaciones*/
+	overflow: hidden;
+}
+
+.columna{
+	background: #a19d98;
+	box-sizing: border-box;
+	float: left;
+	margin-right: 2%;
+	padding: 1em 0;
+	width: 100%;
+}
+
+
+/* RESPONSIVE MOBILE FIRST */
+
+/* SMALL GRID */
+@media (min-width: 480px){
+	
+	/* Cuatros  y Seis columnas en 2 */
+	.cuatro-columnas .columna,
+	.seis-columnas .columna{
+		width: 49%
+	}
+
+	.cuatro-columnas .columna:nth-child(2n),
+	.seis-columnas .columna:nth-child(2n){
+		margin-right: 0;
+	}
+
+	/* Doce columnas en 3 */
+	.doce-columnas .columna{
+		width: 32%;
+	}
+
+	.doce-columnas .columna:nth-child(3n){
+		margin-right: 0;
+	}
+
+}
+
+
+/* MEDIUM GRID */
+@media (min-width: 768px){
+
+	/* Tres Columnas */
+	.tres-columnas .columna{
+		width: 32%;
+	}
+
+	.tres-columnas .columna:nth-child(3n){
+		margin-right: 0;
+	}
+
+    
+    /* Seis Columnas */
+	.seis-columnas .columna{
+		width: 15%;
+	}
+
+	.seis-columnas .columna:nth-child(2n){
+		margin-right: 2%;
+	}
+
+	.seis-columnas .columna:nth-child(6n){
+	    margin-right:  0;
+	}
+
+
+	/* Doce columnas son 4 */
+	.doce-columnas .columna{
+		width: 23.5%;
+	}
+
+	.doce-columnas .columna:nth-child(4n){
+	    margin-right:  0;
+	}
+
+	.doce-columnas .columna:nth-child(3n){
+		margin-right: 2%;
+	}
+
+	/* Right and Left Sidebar */
+	.right-sidebar .sidebar, 
+	.left-sidebar .sidebar{
+		width: 23.5%;
+	}
+
+	.right-sidebar .content,
+	.left-sidebar .content{
+		width: 74.5%;
+	}
+
+	.right-sidebar .sidebar{
+		margin-right: 0;
+	}
+
+	.left-sidebar .content{
+		margin-right: 0;
+	}
+
+
+}
+
+
+/* LARGE GRID */
+@media (min-width: 1024px){
+
+	/* Dos Columnas */
+	.dos-columnas .columna{
+		width: 49%;
+	}
+
+	.dos-columnas .columna:nth-child(2n){
+		margin-right: 0;
+	}
+
+
+	/* Cuatro Columnas */
+	.cuatro-columnas .columna{
+		width: 23.5%;
+	}
+
+
+	.cuatro-columnas .columna:nth-child(2n){
+	    margin-right:  2%;
+	}
+
+	.cuatro-columnas .columna:nth-child(4n){
+	    margin-right:  0;
+	}
+
+
+
+	/* Doce Columnas */
+	.doce-columnas .columna{
+		width: 6.5%;
+	}
+
+	.doce-columnas .columna:nth-child(4n){
+		margin-right:  2%;
+	}
+
+	.doce-columnas .columna:nth-child(12n){
+	    margin-right:  0;
+	}
+
+
+}
